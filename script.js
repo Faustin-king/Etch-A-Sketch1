@@ -20,6 +20,7 @@ newGridBtn.addEventListener('click', () => {
   // check if gridSize is valid
   if (!isNaN(gridSize) && gridSize > 0 && gridSize <= 100) {
     // Remove existing grid
+    const sketchpad = document.querySelector('#sketchpad');
     while (container.firstChild) {
       container.removeChild(container.firstChild);
     }
