@@ -21,13 +21,13 @@ newGridBtn.addEventListener('click', () => {
   if (!isNaN(gridSize) && gridSize > 0 && gridSize <= 100) {
     // Remove existing grid
     const sketchpad = document.querySelector('#sketchpad');
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
+    while (sketchpad.firstChild) {
+      sketchpad.removeChild(sketchpad.firstChild);
     }
 
     // generate new grid
-    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    sketchpad.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    sketchpad.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
     for (let i = 0; i < gridSize * gridSize; i++) {
       const square = document.createElement('div');
       square.classList.add('square');
